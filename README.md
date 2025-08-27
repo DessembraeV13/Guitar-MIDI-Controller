@@ -5,7 +5,7 @@ Projekt zrealizowany w ramach pracy inżynierskiej na Politechnice Wrocławskiej
 
 ![Zdjęcie gotowego przetwornika](Docs/Przetwornik.png)
 
-_Rys. 1: Gotowy, własnoręcznie wykonany 6-kanałowy przetwornik gitarowy._
+_Rys. 1. Gotowy, własnoręcznie wykonany 6-kanałowy przetwornik gitarowy._
 
 ---
 
@@ -27,7 +27,8 @@ _Rys. 1: Gotowy, własnoręcznie wykonany 6-kanałowy przetwornik gitarowy._
 Urządzenie jest systemem modułowym, którego architekturę przedstawia poniższy schemat.
 
 [![Schemat blokowy systemu](Docs/Schemat_blokowy.png)](Docs/Schemat_blokowy.png)
-_Rys. 2: Schemat blokowy kontrolera._
+
+_Rys. 2. Schemat blokowy kontrolera._
 
 1.  **Przetwornik Polifoniczny:** Sześć osobnych cewek nawiniętych na magnesach AlNiCo5 generuje niezależne sygnały dla każdej struny.
 2.  **Sześciokanałowy Wzmacniacz:** Sygnały z przetwornika są wzmacniane i kondycjonowane (dodanie składowej stałej) przy użyciu wzmacniaczy operacyjnych MCP6002, przygotowując je do digitalizacji.
@@ -49,7 +50,8 @@ _Rys. 2: Schemat blokowy kontrolera._
 Sercem oprogramowania jest algorytm DSP, którego działanie przedstawia poniższy schemat.
 
 [![Schemat algorytmu DSP](Docs/Schemat_algorytmu_detekcji.png)](Docs/Schemat_algorytmu_detekcji.png)
-_Rys. 3: Schemat blokowy algorytmu wykrywającego częstotliwość podstawową sygnału._
+
+_Rys. 3. Schemat blokowy algorytmu wykrywającego częstotliwość podstawową sygnału._
 
 Kluczowe kroki dla każdego kanału:
 1.  **Filtracja dolnoprzepustowa i decymacja** w celu dopasowania pasma do analizowanej struny i optymalizacji obliczeń.
@@ -58,7 +60,8 @@ Kluczowe kroki dla każdego kanału:
 4.  **Analiza widma amplitudowego** i wyszukanie maksimum. Ze względu na charakter sygnału gitarowego, algorytm sprawdza również subharmoniczne (f/2, f/3), aby poprawnie zidentyfikować częstotliwość podstawową, a nie jej silniejszą harmoniczną.
 
 [![Przykładowe widmo FFT](Docs/Wykres_widma.png)](Docs/Wykres_widma.png)
-_Rys. 4: Przykładowe widmo sygnału ze struny A5 (próg 0 i 21) z wyraźnie widoczną częstotliwością podstawową i jej harmonicznymi._
+
+_Rys. 4. Przykładowe widmo sygnału ze struny A5 (próg 0 i 21) z wyraźnie widoczną częstotliwością podstawową i jej harmonicznymi._
 
 ---
 
