@@ -4,6 +4,7 @@
 Projekt zrealizowany w ramach pracy inżynierskiej na Politechnice Wrocławskiej. System umożliwia konwersję sygnału audio z każdej struny gitary elektrycznej na niezależne komunikaty MIDI w czasie rzeczywistym. Głównym celem było stworzenie uniwersalnego i unikalnego rozwiązania opartego o własnoręcznie wykonany przetwornik polifoniczny, pozwalającego na sterowanie wirtualnymi instrumentami (VST) i syntezatorami sprzętowymi z zachowaniem niskiego opóźnienia.
 
 ![Zdjęcie gotowego przetwornika](Docs/Przetwornik.png)
+
 _Rys. 1: Gotowy, własnoręcznie wykonany 6-kanałowy przetwornik gitarowy._
 
 ---
