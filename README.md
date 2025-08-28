@@ -16,7 +16,7 @@ _Rys. 1. Gotowy, własnoręcznie wykonany 6-kanałowy przetwornik gitarowy._
 - 📡 **Elastyczna Komunikacja:** Wsparcie dla wielu interfejsów:
     - **Przewodowo przez USB:** Dla maksymalnej stabilności i minimalnego opóźnienia.
     - **Bezprzewodowo przez ESP-NOW:** Niskopoziomowy protokół Wi-Fi zapewniający szybką komunikację z dedykowanym odbiornikiem USB.
-    - **Bezprzewodowo przez Bluetooth LE MIDI:** Standardowa komunikacja z komputerami i urządzeniami mobilnymi.
+    - **Bezprzewodowo przez Bluetooth LE:** Standardowa komunikacja z komputerami i urządzeniami mobilnymi.
 - 🎼 **Wbudowany Stroik Cyfrowy:** Interfejs użytkownika z wyświetlaczem OLED pokazujący częstotliwość strojonej struny.
 - 🎛️ **Interfejs Użytkownika:** Prosta obsługa za pomocą przycisków i przełączników do wyboru trybu pracy i komunikacji.
 
@@ -55,7 +55,7 @@ _Rys. 3. Schemat blokowy algorytmu wykrywającego częstotliwość podstawową s
 
 Kluczowe kroki dla każdego kanału:
 1.  **Filtracja dolnoprzepustowa i decymacja** w celu dopasowania pasma do analizowanej struny i optymalizacji obliczeń.
-2.  **Usunięcie składowej stałej** i nałożenie **funkcji okna Hanninga** w celu przygotowania sygnału do analizy FFT.
+2.  **Usunięcie składowej stałej** i nałożenie **funkcji okna Hanna** w celu przygotowania sygnału do analizy FFT.
 3.  Obliczenie **Szybkiej Transformacji Fouriera (FFT)** przy użyciu biblioteki CMSIS-DSP.
 4.  **Analiza widma amplitudowego** i wyszukanie maksimum. Ze względu na charakter sygnału gitarowego, algorytm sprawdza również subharmoniczne (f/2, f/3), aby poprawnie zidentyfikować częstotliwość podstawową, a nie jej silniejszą harmoniczną.
 
